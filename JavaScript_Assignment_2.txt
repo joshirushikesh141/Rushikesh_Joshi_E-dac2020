@@ -1,0 +1,113 @@
+1)With example illustrate variable and function closure in javascript.
+
+Closures are an extremely powerful property of JavaScript (and most programming languages). 
+Closures are functions that refer to independent (free) 
+In other words, the function defined in the closure ‘remembers’ the environment in which it was created.
+Free variables are variables that are neither locally declared nor passed as parameter.
+
+function numberGenerator() {
+  // Local “free” variable that ends up within the closure
+  var num = 1;
+  function checkNumber() { 
+    	console.log(num);	
+}
+  num++;
+  return checkNumber;
+}
+
+var number = numberGenerator();
+number(); // 2
+
+2) Write a javascript function named reverse which takes a string argument and returns the
+reversed string.
+
+function reverseString(str)
+{
+    var newString = "";
+    for (var i = str.length - 1; i >= 0; i--)
+    {
+        newString += str[i];
+    }
+    return newString;
+}
+reverseString('JavaScript');
+
+3)Given a javascript array of objects having a radius property as shown [{radius: 5}, {radius: 9},
+{radius: 2}] , write a comparator function to sort it.
+
+function comparator(a,b)
+{
+  if(a.radius<b.radius)
+    {
+      return -1;
+    }
+  else if(a.radius>b.radius)
+    {
+      return 1; 
+    }
+  else
+    {
+      return 0;
+    }
+}
+arr=[{radius:9},
+    {radius:2},
+    {radius:5}];
+console.log(arr.sort(comparator));
+
+4)Write a Javascript program to sort elements of an array using sorting algorithm.
+
+function swap(arr, first_Index, second_Index){
+    var temp = arr[first_Index];
+    arr[first_Index] = arr[second_Index];
+    arr[second_Index] = temp;
+}
+
+function bubble_Sort(arr){
+
+    var len = arr.length,
+        i, j, stop;
+
+    for (i=0; i < len; i++){
+        for (j=0, stop=len-i; j < stop; j++){
+            if (arr[j] > arr[j+1]){
+                swap(arr, j, j+1);
+            }
+        }
+    }
+
+    return arr;
+}
+ var arr = [3, 0, 2, 5, -1, 4, 1];
+console.log(bubble_Sort(arr));
+
+
+5)Write a javascript function named length_of_array , which takes an array as argument and
+returns the number of elements in that array (as opposed to what is given by the length
+property of the array). Remember undefined can also be an element if it is explicitly set at some
+index, e.g. x[5] = undefined; . This undefined should be counted, but elements which are not
+present in the array (as arrays can be sparse), should not be counted.
+
+
+var arr = new Array();
+
+arr[0] = "Ovi";
+arr[1] = "Yajat";
+arr[4] = 12;
+arr[6] = "Savri";
+arr[7] = 12.90;
+arr[10] = undefined;
+
+
+var filtered = arr.filter(function (el)
+{
+  return el != null || el == undefined;
+});
+
+console.log(filtered);
+console.log(filtered.length);
+
+
+
+
+

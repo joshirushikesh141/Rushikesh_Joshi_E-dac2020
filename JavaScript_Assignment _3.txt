@@ -1,0 +1,162 @@
+JS Assignment 3
+1 What is a sparse array illustrate its importance with example.
+
+A sparse array is one in which the elements do not have contiguous indexes starting at 0. 
+Normally, the length property of an array specifies the number of elements in the array.
+ If the array is sparse, the value of the length property is greater than the number of elements. 
+Sparse arrays can be created with the Array() constructor or simply by assigning to an array index larger than the current array length.
+
+a = new Array(5);   	// No elements, but a.length is 5.
+a = [];             	// Create an array with no elements and length = 0.
+a[1000] = 0;        	// Assignment adds one element but sets length to 1001.
+
+2.List  different keywords in javascript.
+  Keywords are reserved words in JavaScript that you cannot use to indicate variable labels or function names.
+ There are a total of 63 keywords that JavaScript provides to programmers. All of them are shown in the below-mentioned 
+
+abstract	arguments	 await*	boolean
+break	byte	case	catch
+char	class*	const	continue
+debugger	default	delete	do
+double	else	enum*	eval
+export*	extends*	false	final
+finally	float	for	function
+goto	if	implements  import*
+in	instanceof	int	interface
+let*	long	native	new
+null	package	private	protected
+public	return	short	static
+super*	switch	synchronized  this
+throw	throws	transient	true
+try	typeof	var	void
+volatile	while	with	yield
+
+
+3 Difference between == and === operators in javascript , illustrate with example
+
+1)    ==	Compares the equality of two operands without considering type.
+2)   ===	Compares equality of two operands with type.
+
+Example: 	var a = 5, b = 10, c = "5";
+	var x = a;
+
+	a == c; // returns true
+
+	a === c; // returns false
+
+
+4 With example illustrate typeof operator.
+
+The typeof operator is a unary operator that is placed before its single operand, which can be of any type.
+ Its value is a string indicating the data type of the operand.  
+The typeof operator evaluates to "number", "string" or "boolean" if its operand is a number, string, or boolean value and returns true or false based on the evaluation.
+Here is a list of the return values for the typeof Operator.
+
+Type
+String            Returned by typeof
+Number		"number"
+String		"string"
+Boolean		"boolean"
+object		"object"
+Function		"function"
+Undefined		"undefined"
+Null		"object"
+
+<script> 
+// "string" 
+document.write(typeof 'mukul'+"<br>")  //String
+  
+// "number" 
+document.write(typeof 25 +"<br>")  // Number
+  
+// "undefined" 
+document.write(typeof variable) // undefined
+</script> 
+
+5 With a suitable example explain for loop in javascript.
+
+1) FOR LOOP :-   The for loop repeats a block of code as long as a certain condition is met. 
+It is typically used to execute a block of code for certain number of times.
+ Its syntax is:
+or(initialization; condition; increment) 
+{
+    // Code to be executed
+}
+
+The following example defines a loop that starts with i=1. The loop will continued until the value of variable i is less than or equal to 5.
+ The variable i will increase by 1 each time the loop runs:
+
+for(var i=1; i<=5; i++) 
+{
+    document.write("<p>The number is " + i + "</p>");
+}
+
+2) FOR-EACH LOOP :- The for loop is particularly useful for iterating over an array. 
+The following example will show  how to print each item or element of the JavaScript array.
+
+var fruits = ["Apple", "Banana", "Mango", "Orange", "Papaya"];
+ 
+for(var i=0; i<fruits.length; i++) {
+    document.write("<p>" + fruits[i] + "</p>");
+}
+
+3) FOR IN LOOP : - The for-in loop is a special type of a loop that iterates over the properties of an object, or the elements of an array.
+ The generic syntax of the for-in loop is:
+
+for(variable in object) {
+    // Code to be executed
+}
+
+var person = {"name": "Clark", "surname": "Kent", "age": "36"};
+ 
+for(var prop in person) {  
+    document.write("<p>" + prop + " = " + person[prop] + "</p>"); 
+}
+
+4)FOR - OF LOOP :- ES6 introduces a new for-of loop which allows us to iterate over arrays or other iterable objects (e.g. strings) very easily.
+ Also, the code inside the loop is executed for each element of the iterable object.
+The following example will show  how to loop through arrays and strings using this loop.
+// Iterating over array
+
+let letters = ["a", "b", "c", "d", "e", "f"];
+
+for(let letter of letters) 
+{
+    console.log(letter);	 // a,b,c,d,e,f
+}
+
+// Iterating over string
+let greet = "Hello World!";
+
+for(let character of greet)
+ {
+    console.log(character); // H,e,l,l,o, ,W,o,r,l,d,!
+}
+
+
+6 With suitable example explain date methods in javascript
+
+These methods can be used for getting information from a date object:
+
+Method				Description
+
+getFullYear()		Get the year as a four digit number (yyyy)
+getMonth()		Get the month as a number (0-11)
+getDate()			Get the day as a number (1-31)
+getHours()			Get the hour (0-23)
+getMinutes()		Get the minute (0-59)
+getSeconds()		Get the second (0-59)
+getMilliseconds()		Get the millisecond (0-999)
+getTime()			Get the time (milliseconds since January 1, 1970)
+getDay()			Get the weekday as a number (0-6)
+Date.now()		Get the time. ECMAScript 5.
+
+var d = new Date();
+d;		//Mon Jan 11 2021 02:03:59 GMT+0530 (India Standard Time)
+
+var d = new Date(2018, 11, 24, 10, 33, 30, 0);
+d; 		//Mon Dec 24 2018 10:33:30 GMT+0530 (India Standard Time)
+
+ d.getTime();  	// The getTime() function returns the number of milliseconds since then
+d.getFullYear();	//The getFullYear() method returns the full year of a date:  2021
+

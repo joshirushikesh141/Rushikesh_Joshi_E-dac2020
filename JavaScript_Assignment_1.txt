@@ -1,0 +1,154 @@
+//1 WAP to illustrate Functions in JavaScript
+function Demo()
+{
+  console.log("Hello World");
+  console.log("Welcome to Jvascript languauge.....!!!!");
+}
+
+// 2 WAP to illustrate implementation of functions in javascript.
+
+function sum(x,y)
+{
+  return x+y;
+}
+sum(1,2);
+
+
+function Addition(num1,num2)
+{
+  return num1 + num2;
+}
+Addition(12,28);
+
+
+// 3 WAP to illustrate the declaration of an object, assignment of value and display it.
+
+var Employee = {
+  id : 100;
+  Name : "Deepika Singh",
+  designation : "Project Manager",
+  salary : 20000,
+  Company:"TCS",
+  Details : function()
+  {
+    return(this.Name + " is woking in "+ this.company + "as a" + this.designation);
+  }
+ };
+Employee.Details();
+
+var Student = {
+  firstName :"Rushikesh",
+  lastName: "Joshi",
+  roll : 25,
+  fullname : function(){
+    return(this.firstname + " "+this.lastname);
+  }
+};
+Student.fullname();
+
+var car ={
+ name :"Honda City",
+ company:"Honda",
+ price : 1300000,
+ getDetails()
+ {
+   return ("I bought new car " + this.name +" of " + this.company);
+ }
+};
+
+car
+car.name;
+car.getDetails();
+
+//3. WAP to illustrate declaration of array, assignment of value to an array and display it.  
+
+  var x =["Mon","Tue","Wed","thus","Fri","Sat","Sun"];
+
+for(var i in x)
+{
+  console.log("Days "+ i +" : "+ x[i]);
+}
+
+var a = {a : "Rupali", c:"Ruchit",e:"Roshani D", r:"Rushabh",f:"Rohit K",p:"Rushi G"};
+
+for(var i in a)
+{
+  console.log("Names "+ i +" : "+ a[i]);
+}
+
+//4.
+
+function is_integer(x)
+{ 
+  
+  if(isNaN(x))
+    {
+         console.log("The entered value is not an integer");
+    }
+  else
+    {
+         console.log("The entered value is an integer");
+    }
+};
+
+is_integer(12);
+//5..Using the forEach function defined for an array, find the sum of the array of numbers.
+
+var arr = [2,4,6,8,10,12];
+
+var sum = 0;
+for(var i in arr)
+{
+  var sum = sum +  arr[i];
+ 
+}
+ console.log(sum);
+
+function add_all(arr)
+{
+  var sum = 0;
+  for(var i in arr)
+    {
+      sum = sum + arr[i];
+    }
+	return sum;
+};
+
+console.log(sum);
+
+var arr = [2,4,6,8,10,12];
+var array =add_all(arr);
+
+
+//6. Write a JavaScript program to convert temperatures to and from celsius, fahrenheit. 
+
+function toCelsius(f)
+{
+  var celsius = (5/9) * (f-32);
+  return celsius ;
+}
+
+toCelsius(77);
+
+function toFahrenheit(c)
+{
+  var Fahrenheit= ((9*c)/5) + 32 ;
+return Fahrenheit;
+}
+
+toFahrenheit(25);
+
+//7.Write a factorial function that returns the factorial of a given number, n. Make sure you return the
+calculated value and not just print it.
+
+function factorial(num)
+{
+ var fact = 1;
+  for(var x=num;x > 1;x--)
+    {
+      var fact = fact * x;
+    }
+  return fact;
+};
+
+factorial(5); 
